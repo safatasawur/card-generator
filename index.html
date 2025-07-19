@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+  <h2>Add a Card</h2>
+   <div class="main-container">
+     <form id="inputForm">
+       <input type="text" id="title" placeholder="Video Title" required />
+       <input type="text" id="channel" placeholder="Channel Name" required />
+       <input type="number" id="views" placeholder="Views" required />
+       <input type="number" id="months" placeholder="Months Ago" required />
+       <input type="text" id="duration" placeholder="Duration (e.g. 5:33)" required />
+       <input type="text" id="image" placeholder="Image URL" required />
+       <button type="submit">Add Card</button>
+     </form>
+
+     
+     <hr>
+    <div id="cardContainer" class="container"></div>
+   </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
