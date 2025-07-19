@@ -17,20 +17,17 @@ function createCard(title, channelName, views, monthsOld, duration, imageUrl) {
   const titleEl = document.createElement('h3');
   titleEl.textContent = title;
   
-  const channelEl = document.createElement('p')
-  channelEl.textContent=channelName;
-
-  const viewsEl = document.createElement('p');
-  viewsEl.textContent = `${views} views • ${monthsOld} months ago`;
+  const metaEl = document.createElement('p');
+  metaEl.textContent = `${channelName} • ${views} views • ${monthsOld} months ago`
 
   const durationEl = document.createElement('p');
-  durationEl.textContent = `Duration: ${duration}`;
+  durationEl.textContent = ` ${duration}`;
+  durationEl.classList.add('time')
 
   // Assemble
   content.appendChild(titleEl);
-  content.appendChild(viewsEl);
+  content.appendChild(metaEl);
   content.appendChild(durationEl);
-
   card.appendChild(img);
   card.appendChild(content);
 
@@ -42,12 +39,13 @@ document.getElementById('inputForm').addEventListener('submit', function (e) {
   e.preventDefault();
 
   const title = document.getElementById('title').value;
+  const channel = document.getElementById('channel').value;
   const views = parseInt(document.getElementById('views').value);
   const months = parseInt(document.getElementById('months').value);
   const duration = document.getElementById('duration').value;
   const image = document.getElementById('image').value;
 
-  createCard(title, views, months, duration, image);
+  createCard(title,channel,  views, months, duration, image);
 
   this.reset(); // Clear form
 });

@@ -9,6 +9,8 @@
   padding: 20px;
   width: 90%;
   border-radius:30px ;
+  margin: auto; 
+  
 
 }
 
@@ -33,6 +35,7 @@ input, button {
   width: 70%;
   background-color: white;
   height: 150px;
+  position: relative;
 }
 
 .thumbnail {
@@ -62,4 +65,13 @@ input, button {
 }
 #card-container{
     justify-content: center;
+}
+.time{
+    position: absolute;
+    left:35%;
+    top: 80%;
+    transform: translateX(-50%);
+    color:white;
+    background-color: rgb(27, 27, 27);
+    border-radius: 30%;
 }
